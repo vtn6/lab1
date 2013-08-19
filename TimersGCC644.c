@@ -117,7 +117,7 @@ begin
     //reset the task timer
   if (tsk1m1 != 0)
   
-  fprintf(stdout,"NO CAPACITA\n");
+  fprintf(stdout,"NO CAPACITA hardihar\n");
   //fprintf(stdout,"this is awk");
 
 end

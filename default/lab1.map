@@ -44,7 +44,6 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1
 LOAD lab1.o
 LOAD TimersGCC644.o
 LOAD uart.o
-LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libm.a
 LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
 LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a
 LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
@@ -278,65 +277,64 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
  *(.fini0)
                 0x000004e0                _etext = .
 
-.data           0x00800100       0x6a load address 0x000004e0
+.data           0x00800100       0x72 load address 0x000004e0
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
  .data          0x00800100        0x0 lab1.o
- .data          0x00800100       0x61 TimersGCC644.o
-                0x00800153                uart_str
- .data          0x00800161        0x8 uart.o
- .data          0x00800169        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
- .data          0x00800169        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
- .data          0x00800169        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(fputs.o)
- .data          0x00800169        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(iob.o)
+ .data          0x00800100       0x6a TimersGCC644.o
+                0x0080015c                uart_str
+ .data          0x0080016a        0x8 uart.o
+ .data          0x00800172        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .data          0x00800172        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .data          0x00800172        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(fputs.o)
+ .data          0x00800172        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(iob.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x0080016a                . = ALIGN (0x2)
- *fill*         0x00800169        0x1 00
-                0x0080016a                _edata = .
-                0x0080016a                PROVIDE (__data_end, .)
+                0x00800172                . = ALIGN (0x2)
+                0x00800172                _edata = .
+                0x00800172                PROVIDE (__data_end, .)
 
-.bss            0x0080016a       0x6e
-                0x0080016a                PROVIDE (__bss_start, .)
+.bss            0x00800172       0x6e
+                0x00800172                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0080016a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
- .bss           0x0080016a        0x0 lab1.o
- .bss           0x0080016a        0x0 TimersGCC644.o
- .bss           0x0080016a       0x52 uart.o
- .bss           0x008001bc        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
- .bss           0x008001bc        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
- .bss           0x008001bc        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(fputs.o)
- .bss           0x008001bc        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(iob.o)
+ .bss           0x00800172        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+ .bss           0x00800172        0x0 lab1.o
+ .bss           0x00800172        0x0 TimersGCC644.o
+ .bss           0x00800172       0x52 uart.o
+ .bss           0x008001c4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .bss           0x008001c4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .bss           0x008001c4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(fputs.o)
+ .bss           0x008001c4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(iob.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x008001bc       0x16 TimersGCC644.o
-                0x008001bc                T1poll
-                0x008001be                lastT1poll
-                0x008001c0                lastT1capture
-                0x008001c2                tsk1m1
-                0x008001c4                time1
-                0x008001c6                lastACObit
-                0x008001c7                T1capture
-                0x008001c9                time3
-                0x008001cb                period
-                0x008001cd                periodPoll
-                0x008001cf                ACObit
-                0x008001d0                time2
- COMMON         0x008001d2        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(iob.o)
-                0x008001d2                __iob
-                0x008001d8                PROVIDE (__bss_end, .)
+ COMMON         0x008001c4       0x16 TimersGCC644.o
+                0x008001c4                T1poll
+                0x008001c6                lastT1poll
+                0x008001c8                lastT1capture
+                0x008001ca                tsk1m1
+                0x008001cc                time1
+                0x008001ce                lastACObit
+                0x008001cf                T1capture
+                0x008001d1                time3
+                0x008001d3                period
+                0x008001d5                periodPoll
+                0x008001d7                ACObit
+                0x008001d8                time2
+ COMMON         0x008001da        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(iob.o)
+                0x008001da                __iob
+                0x008001e0                PROVIDE (__bss_end, .)
                 0x000004e0                __data_load_start = LOADADDR (.data)
-                0x0000054a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000552                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008001d8        0x0
-                0x008001d8                PROVIDE (__noinit_start, .)
+.noinit         0x008001e0        0x0
+                0x008001e0                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008001d8                PROVIDE (__noinit_end, .)
-                0x008001d8                _end = .
-                0x008001d8                PROVIDE (__heap_start, .)
+                0x008001e0                PROVIDE (__noinit_end, .)
+                0x008001e0                _end = .
+                0x008001e0                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -426,12 +424,12 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
  .debug_frame   0x00000000       0x70 TimersGCC644.o
  .debug_frame   0x00000070       0x40 uart.o
 
-.debug_str      0x00000000      0x171
+.debug_str      0x00000000      0x164
  *(.debug_str)
- .debug_str     0x00000000      0x13c TimersGCC644.o
-                                0x18d (size before relaxing)
- .debug_str     0x0000013c       0x35 uart.o
-                                0x10c (size before relaxing)
+ .debug_str     0x00000000      0x12f TimersGCC644.o
+                                0x180 (size before relaxing)
+ .debug_str     0x0000012f       0x35 uart.o
+                                 0xff (size before relaxing)
 
 .debug_loc      0x00000000      0x18f
  *(.debug_loc)
